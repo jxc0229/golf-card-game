@@ -1,38 +1,86 @@
+/* src/App.css */
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.game-board {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Style for PlayerHand component */
+.player-hand {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 10px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(2, 150px);
+  grid-gap: 10px;
+}
+
+.card {
+  width: 100px;
+  height: 150px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.deck {
+  display: flex;
+  justify-content: space-between;
+  /* Add space between the piles */
+  align-items: center;
+  /* Align items vertically to the center */
+  width: 220px;
+  /* Optional: limit the width of the deck area */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.draw-pile,
+.discard-pile {
+  margin: 10px;
+  text-align: center;
 }
+
+img {
+  width: 100px;
+  height: auto;
+}
+
+.card-values-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the table horizontally */
+  margin-top: 20px; /* Adjust the position as needed */
+}
+
+.card-values-wrapper {
+  background-color: #f0f8ff; /* Apply background color to this wrapper */
+  padding: 20px; /* Add padding around the table */
+  border-radius: 8px; /* Optional: Add rounded corners */
+  width: fit-content; /* Fit the content to the table size */
+  border: 2px solid #333; /* Add a 2px solid border with a dark color (#333) */
+}
+.card-values-table table {
+  width: 100%; /* Make the table fill the wrapper */
+  border-collapse: collapse; /* Collapse borders for a cleaner look */
+}
+.card-values-table tr:first-child td {
+  font-weight: bold;
+  text-align: center;
+}
+
+.card-values-table td, .card-values-table th {
+  padding: 5px; /* Add padding inside table cells */
+  text-align: center; /* Center text inside cells */
+}
+
