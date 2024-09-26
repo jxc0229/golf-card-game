@@ -3,25 +3,18 @@ import React from 'react';
 import Card from './Card';
 
 
-const Deck = ({ deckId, discardPile, drawPile, drawCard }) => {
+const Deck = ({ discardPile, drawnCard, drawCard, discardCard }) => {
 
 
 
   return (
     <div className="deck">
-      {/* <div className="draw-pile">
-        <h3>Remaining deck</h3>
-        <img
-          src={"https://www.deckofcardsapi.com/static/img/back.png"}
-          alt={`Back of a card`}
-        />
-      </div> */}
       <div className="draw-pile" onClick={drawCard}>
         <h3>Remaining deck</h3>
-        {drawPile.length > 0 ? (
+        {drawnCard ? (
           <img
-            src={drawPile[0].image} // Show the drawn card face-up
-            alt={`${drawPile[0].value} of ${drawPile[0].suit}`}
+            src={drawnCard.image} // Show the drawn card face-up
+            alt={`${drawnCard.value} of ${drawnCard.suit}`}
           />
         ) : (
           <img
@@ -30,7 +23,7 @@ const Deck = ({ deckId, discardPile, drawPile, drawCard }) => {
           />
         )}
       </div>
-      <div className="discard-pile">
+      <div className="discard-pile" onClick={discardCard}>
         <h3>Discard Pile</h3>
         {discardPile.length > 0 ? (
           <div>

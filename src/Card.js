@@ -1,9 +1,9 @@
 // src/Card.js
 import React from 'react';
 
-const Card = ({ card, isRevealed, onReveal }) => {
+const Card = ({ card, isRevealed, onClick }) => {
   return (
-    <div className="card" onClick={onReveal}>
+    <div className="card" onClick={onClick}>
       {isRevealed ? (
         <div>
           <img src={card.image} alt={`${card.value} of ${card.suit}`} />

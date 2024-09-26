@@ -4,6 +4,25 @@
   text-align: center;
 }
 
+.reset-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px 15px;
+  background-color: #ff4d4d;
+  /* Red color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.reset-button:hover {
+  background-color: #ff1a1a;
+  /* Darker red on hover */
+}
+
 .game-board {
   display: flex;
   justify-content: space-around;
@@ -17,6 +36,13 @@
   flex-direction: column;
   align-items: center;
   margin: 10px;
+}
+
+.player-hand.active {
+  border-color: green;
+  /* Highlight the active player's hand with a green border */
+  background-color: #f0fff0;
+  /* Optional: light green background for the active player */
 }
 
 .card-grid {
@@ -59,28 +85,42 @@ img {
 .card-values-table {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center the table horizontally */
-  margin-top: 20px; /* Adjust the position as needed */
+  align-items: center;
+  /* Center the table horizontally */
+  margin-top: 20px;
+  /* Adjust the position as needed */
 }
 
 .card-values-wrapper {
-  background-color: #f0f8ff; /* Apply background color to this wrapper */
-  padding: 20px; /* Add padding around the table */
-  border-radius: 8px; /* Optional: Add rounded corners */
-  width: fit-content; /* Fit the content to the table size */
-  border: 2px solid #333; /* Add a 2px solid border with a dark color (#333) */
+  background-color: #f0f8ff;
+  /* Apply background color to this wrapper */
+  padding: 20px;
+  /* Add padding around the table */
+  border-radius: 8px;
+  /* Optional: Add rounded corners */
+  width: fit-content;
+  /* Fit the content to the table size */
+  border: 2px solid #333;
+  /* Add a 2px solid border with a dark color (#333) */
 }
+
 .card-values-table table {
-  width: 100%; /* Make the table fill the wrapper */
-  border-collapse: collapse; /* Collapse borders for a cleaner look */
+  width: 100%;
+  /* Make the table fill the wrapper */
+  border-collapse: collapse;
+  /* Collapse borders for a cleaner look */
 }
+
 .card-values-table tr:first-child td {
   font-weight: bold;
   text-align: center;
 }
 
-.card-values-table td, .card-values-table th {
-  padding: 5px; /* Add padding inside table cells */
-  text-align: center; /* Center text inside cells */
+.card-values-table td,
+.card-values-table th {
+  padding: 5px;
+  /* Add padding inside table cells */
+  text-align: center;
+  /* Center text inside cells */
 }
 
