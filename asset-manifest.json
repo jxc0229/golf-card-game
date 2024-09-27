@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/golf-card-game/static/css/main.996b0996.css",
+    "main.js": "/golf-card-game/static/js/main.07cebbe1.js",
+    "static/js/453.895b3acb.chunk.js": "/golf-card-game/static/js/453.895b3acb.chunk.js",
+    "index.html": "/golf-card-game/index.html",
+    "main.996b0996.css.map": "/golf-card-game/static/css/main.996b0996.css.map",
+    "main.07cebbe1.js.map": "/golf-card-game/static/js/main.07cebbe1.js.map",
+    "453.895b3acb.chunk.js.map": "/golf-card-game/static/js/453.895b3acb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.996b0996.css",
+    "static/js/main.07cebbe1.js"
+  ]
+}
